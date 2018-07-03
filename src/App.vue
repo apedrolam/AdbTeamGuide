@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
+    <header>
+      <h1>Adobe Practice Barcelona Guidelines</h1>
+      <div class="menu">
+        <ul>
+          <a href=""><li>Outlook</li></a>
+          <a href=""><li>Teams</li></a>
+          <a href=""><li class="last">Holidays</li></a>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        
+      </div>
+    </main>
   </div>
 </template>
 
@@ -17,37 +23,48 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      entries: []
     }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+body {
+  background-color: #ebebeb;
+  color: #2d2d2d;
+  font-family: Arial;
+  margin: 0 auto;
+
+  header {
+    color: #ebebeb;
+    background-color: #2d2d2d;
+
+    h1 {
+      width: 50%;
+      display: inline;
+    }
+
+    .menu {
+      width: 50%;
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        color: #ebebeb;
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+
+          &.last {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
